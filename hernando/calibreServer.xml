@@ -48,13 +48,13 @@
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-  </Data>
+  
     <Volume>
       <HostDir>/mnt/user/appdata/calibre/</HostDir>
       <ContainerDir>/opt/calibre</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-  </Data>  
+   
     <Volume>
       <HostDir>/mnt/user/downloads/</HostDir>
       <ContainerDir>/downloads</ContainerDir>
