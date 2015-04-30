@@ -13,10 +13,10 @@
   <Overview>
     Calibre is an e-book management software. RDP-Calibre is a combo docker for calibre web server and gui (through RDP). With this docker, you get the best of both worlds, and they both use the same database.
   </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
-  <Registry>https://registry.hub.docker.com/u/aptalca/docker-rdp-calibre/</Registry>
  
-  <Repository>aptalca/docker-rdp-calibre</Repository>
+  <Registry>https://registry.hub.docker.com/u/hernandito/calibreserver-docker</Registry>
+ 
+  <Repository>hernandito/calibreserver-docker</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
