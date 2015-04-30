@@ -2,7 +2,7 @@
 <Containers>
   <Name>Calibre Server</Name>
   <Description>
-    This is a fork of Aptalca's RDP-Calibre is a combo docker for calibre web server and gui (through RDP) [br][br]
+    This is a fork of Aptalca's RDP-Calibre is a combo docker for calibre web server. [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/config[/b] This is where the rdp configuration and library files will reside[br][br]
     [b]/opt/calibre[/b] Calibre-Server's file will be copied to the unRAID array.  [br][br]
@@ -10,10 +10,10 @@
     Don't forget to enter in the host port and app folder. [br][br]
     [span style='color: #E80000;']8080[/span] is the port for the calibre server web gui[br]
 
-    To access the calibre GUI, connect to the unraid IP via RDP client ([span style='color: #E80000;']user: root | password: calibre[/span])and click on the the desktop icon for calibre. Both the server and the GUI use the same database in the /config folder.
+    Your calibre is only available through a web interface. 
   </Description>
   <Overview>
-    Calibre is an e-book management software. RDP-Calibre is a combo docker for calibre web server and gui (through RDP). With this docker, you get the best of both worlds, and they both use the same database.
+    Calibre is an e-book management software. 
   </Overview>
  
   <Registry>https://registry.hub.docker.com/u/hernandito/calibreserver-docker</Registry>
@@ -24,11 +24,6 @@
     <Networking>
     <Mode>bridge</Mode>
     <Publish>
-      <Port>
-        <HostPort>3389</HostPort>
-        <ContainerPort>3389</ContainerPort>
-        <Protocol></Protocol>
-      </Port>
       <Port>
         <HostPort></HostPort>
         <ContainerPort>8080</ContainerPort>
