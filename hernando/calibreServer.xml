@@ -42,11 +42,23 @@
   </Environment>    
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/Dropbox/Calibre/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/calibre/</HostDir>
+      <ContainerDir>/opt/calibre</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>  
+    <Volume>
+      <HostDir>/mnt/user/downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>  
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Banner></Banner>
   <Icon>http://i.imgur.com/Rkcm4YP.png</Icon>
