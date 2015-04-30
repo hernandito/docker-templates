@@ -25,7 +25,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
+        <HostPort>8080</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol></Protocol>
       </Port>
