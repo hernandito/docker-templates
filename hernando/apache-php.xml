@@ -6,7 +6,10 @@
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
     [b]/web[/b] : this path is the web directory[br]
-    [b]/logs[/b] : this path is the logs directory[br]
+    [b]/logs[/b] : this path is the logs directory[br][br]
+
+I have added custom [b]Crontab[/b] functionality.To enable Cron jobs, edit the file [b]crons.conf[/b] in folder [/b]/config[/b]. [br]
+Add as many tasks as you need, save the file, and [b]restart[/b] the container.[br][br]
 
   </Description>
   <Registry>https://registry.hub.docker.com/u/hernandito/hernando-apachephp-docker/</Registry>
