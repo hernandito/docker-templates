@@ -33,7 +33,11 @@
   </Networking>
   <Environment>
     <Variable>
-      <Name></Name>
+      <Name>CALUSER</Name>
+      <Value>hernando</Value>
+    </Variable>
+    <Variable>
+      <Name>CALPASSWORD</Name>
       <Value></Value>
     </Variable>
   </Environment>    
