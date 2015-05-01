@@ -2,10 +2,10 @@
 <Containers>
   <Name>Calibre Server</Name>
   <Description>
-    [b][span style='color: #E80000;']=====================[/span][/b][br]
-    [b][span style='color: #E80000;']|  VERY IMPORTANT!!! |[/span][/b][br]
-    [b][span style='color: #E80000;']=====================[/span][/b][br]    
-    [b][span style='color: #0000FF;']Click Open the Advanced View Button ----------------------------> [/span][/b][br][br]
+    [b][span style='color: #E80000;']===============================[/span][/b][br]
+    [b][span style='color: #E80000;']   VERY IMPORTANT!!!  [/span][/b][br]
+    [b][span style='color: #E80000;']===============================[/span][/b][br]    
+    [b][span style='color: #0000FF;']Click Open the Advanced View Button ------------------------------------------------------------------> [/span][/b][br][br]
     
     This is a fork of Aptalca's RDP-Calibre is a combo docker for calibre web server. [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
