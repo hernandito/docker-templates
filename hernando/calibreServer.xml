@@ -2,12 +2,24 @@
 <Containers>
   <Name>Calibre Server</Name>
   <Description>
+    [b][u][span style='color: #E80000;']@@@@@!!!  VERY IMPORTANT   !!!@@@@@[/span][/u][/b][br]
+    [b][u][span style='color: #0000FF;']Click Open the Advanced View Button ----------------------------> [/span][/u][/b][br][br]
+    
     This is a fork of Aptalca's RDP-Calibre is a combo docker for calibre web server. [br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/config[/b] This is where the rdp configuration and library files will reside[br][br]
     [b]/opt/calibre[/b] Calibre-Server's file will be copied to the unRAID array.  [br][br]
     [b]/downloads[/b] unRAID's download folder. To automatically add new book downloads to Calibre[br][br]
+    
+    In the Variables Section (After Opening Advanced View) please make sure you enter:[br][br]
+    [b]/CALUSER[/b] The username to login into the Calibre web page.[br][br]
+    [b]/CALPASSWORD[/b] The password for the user above.    [br][br]
+    
+    
     Don't forget to enter in the host port and app folder. [br][br]
+    
+    
+    
     [span style='color: #E80000;']8080[/span] is the port for the calibre server web gui[br]
 
     Your calibre is only available through a web interface. 
