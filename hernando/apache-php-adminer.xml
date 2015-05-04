@@ -74,7 +74,7 @@ Save the file, and [b]restart[/b] the container.[br][br]
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:81]/</WebUI>
-  <Banner>http://s17.postimg.org/wzx4dbthb/logo_phpapacheadminer.png</Banner>
-  <Icon>http://s17.postimg.org/wzx4dbthb/logo_phpapacheadminer.png</Icon>
+  <Banner>http://i.imgur.com/gxuaqTP.png</Banner>
+  <Icon>http://i.imgur.com/gxuaqTP.png</Icon>
 </Container>
 
