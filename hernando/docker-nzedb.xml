@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>nzedb-docker</Name>
+  <Description>Converted XML File from https://registry.hub.docker.com/u/hernandito/nzedb-docker/dockerfile/raw.[br][br]Converted by Docker2XML.[br][br][span style=\'color: #E80000;\']Double check the entries via the Advanced View button.[br][br]You will need to manually add any required environment variables.[/span]&#13;
+</Description>
+  <Registry>https://registry.hub.docker.com/u/hernandito/nzedb-docker</Registry>
+  <Repository>hernandito/nzedb-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8800</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/nzedb/sites-enabled/</HostDir>
+      <ContainerDir>/etc/nginx/sites-enabled</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/nzedb/logs/</HostDir>
+      <ContainerDir>/var/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/nzedb/nZEDb/</HostDir>
+      <ContainerDir>/var/www/nZEDb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/nzedb/mysql/</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>a91c4b8d</Version>
+  <WebUI>http://[IP]:[PORT:8800]</WebUI>
+  <Banner>http://i.imgur.com/vkAxhcN.png</Banner>
+  <Icon>http://i.imgur.com/vkAxhcN.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
