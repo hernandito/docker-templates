@@ -9,8 +9,8 @@
     
     This is a fork of Aptalca's RDP-Calibre is a combo docker for calibre web server. [br][br]
     [b][span style='color: #E80000;']Configuration[/span][/b][br]
-    [b]/config[/b] This is where the rdp configuration and library files will reside[br][br]
-    [b]/opt/calibre[/b] Calibre-Server's file will be copied to the unRAID array.  [br][br]
+    [b]/config[/b] This is where your Calibre library/database resides (I have mine in Dropbox)[br][br]
+    [b]/opt/calibre[/b] Calibre-Server's program files. I have them stored in the unRAID array.  [br][br]
     [b]/downloads[/b] unRAID's download folder. To automatically add new book downloads to Calibre[br][br]
     
     In the Variables Section (After Opening Advanced View) please make sure you enter:[br][br]
