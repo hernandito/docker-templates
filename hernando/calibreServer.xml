@@ -17,8 +17,9 @@
     [b]/CALUSER[/b] The username to login into the Calibre web page.[br][br]
     [b]/CALPASSWORD[/b] The password for the user above.    [br][br]
  
-    To scan automatically for new books, enter a line similar to the below to a cron job in the container:   [br]
- */10 * * * * /opt/calibre/calibredb add /downloads/complete/Books/ -r --with-library /config && rm -rf /downloads/complete/Books/*
+    To scan automatically for new books, edit the cronjob by changing the paths. Edit cron by typing:   [br]
+    crontab -e [br][br]
+ 
     
     
     Don't forget to enter in the host port and app folder. [br][br]
