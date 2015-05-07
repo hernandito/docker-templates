@@ -79,6 +79,6 @@
     </Volume>
   </Data>  
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <Banner></Banner>
+  <Banner>http://i.imgur.com/Ty7wZxR.png</Banner>
   <Icon>http://i.imgur.com/Ty7wZxR.png</Icon>
 </Containers>
