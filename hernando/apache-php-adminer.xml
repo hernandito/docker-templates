@@ -18,6 +18,8 @@ Type the desired username and password and click "Create .htpassword File". Copy
 Go to the /web/adminer folder from above, and edit the .htaccess file in there. Eliminate the top line and paste your new code.[br]
 Save the file, and [b]restart[/b] the container.[br][br]
 
+To access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]
+
   </Description>
   <Registry>https://registry.hub.docker.com/u/hernandito/docker-apache-php-adminer/</Registry>
   <Repository>hernandito/docker-apache-php-adminer</Repository>
