@@ -18,7 +18,7 @@
     [b]/CALPASSWORD[/b] The password for the user above.    [br][br]
  
     To scan automatically for new books, enter a line similar to the below to a cron job in the container:   [br]
- */10 * * * * xvfb-run calibredb add /downloads/complete/Books/ -r --with-library /config && rm -rf /downloads/complete/Books/*
+ */10 * * * * /opt/calibre/calibredb add /downloads/complete/Books/ -r --with-library /config && rm -rf /downloads/complete/Books/*
     
     
     Don't forget to enter in the host port and app folder. [br][br]
