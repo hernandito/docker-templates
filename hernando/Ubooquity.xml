@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Ubooquity</Name>
+  <Description>
+    Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : set this path to where you wish Ubooquity to store it's configuration, logs, database and jar file.[br]
+    [b]/mnt[/b] : this path is a location from which your digital documents will be accessible from.[br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/hurricane/ubooquity</Registry>
+  <GitHub>https://github.com/hurricanehernandez/ubooquity</GitHub>
+  <Repository>hurricane/ubooquity</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8085</HostPort>
+        <ContainerPort>8085</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/opt/appdata/Ubooquity/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8085]/admin</WebUI>
+  <Banner>http://i.imgur.com/InPPMtr.png</Banner>
+  <Icon>http://i.imgur.com/RCyKDsT.png</Icon>
+</Container>
