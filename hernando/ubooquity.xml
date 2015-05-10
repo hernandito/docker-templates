@@ -25,7 +25,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/opt/appdata/Ubooquity/</HostDir>
+      <HostDir>/mnt/appdata/Ubooquity/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
