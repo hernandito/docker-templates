@@ -76,7 +76,7 @@ To access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:81]/</WebUI>
-  <Banner>http://i.imgur.com/gxuaqTP.png</Banner>
-  <Icon>http://i.imgur.com/gxuaqTP.png</Icon>
+  <Banner>http://www.mediafire.com/view/c6c6191jrn9x7wn/logo_phpapache.png</Banner>
+  <Icon>http://www.mediafire.com/view/c6c6191jrn9x7wn/logo_phpapache.png</Icon>
 </Container>
 
