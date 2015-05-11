@@ -76,7 +76,7 @@ To access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:81]/</WebUI>
-  <Banner>http://i.imgur.com/PepNCs3.png</Banner>
-  <Icon>http://i.imgur.com/PepNCs3.png</Icon>
+  <Banner>http://i.imgur.com/A1AQVll.png</Banner>
+  <Icon>http://i.imgur.com/A1AQVll.png</Icon>
 </Container>
 
