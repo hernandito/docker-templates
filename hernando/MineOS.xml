@@ -39,7 +39,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8443]/admin</WebUI>
+  <WebUI>https://[IP]:[PORT:8443]/admin</WebUI>
   <Banner>http://i.imgur.com/P6RRtHH.png</Banner>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
 </Container>
