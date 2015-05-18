@@ -2,7 +2,7 @@
 <Container>
   <Name>MineOS</Name>
   <Description>
-   MineOS is an easy to manage Minecraft Server. It as its on web interface to manage all aspects of the server.[br][br]
+   MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/var/games/minecraft[/b] : set this path to where you wish all the Minecraft Server items to be stored. Should be you app folder.[br]
   </Description>
@@ -11,7 +11,12 @@
   <Repository>hernandito/docker-mineos</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+ <Environment>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Value>minecraft</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -29,17 +34,12 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/appdata/Ubooquity/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt</HostDir>
-      <ContainerDir>/mnt</ContainerDir>
+      <HostDir>/mnt/appdata/minecraftos/</HostDir>
+      <ContainerDir>/var/games/minecraft</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8085]/admin</WebUI>
-  <Banner>http://i.imgur.com/InPPMtr.png</Banner>
-  <Icon>http://i.imgur.com/RCyKDsT.png</Icon>
+  <WebUI>http://[IP]:[PORT:8443]/admin</WebUI>
+  <Banner>http://i.imgur.com/P6RRtHH.png</Banner>
+  <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
 </Container>
