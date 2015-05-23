@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Other</Category>
   <Name>MineOS</Name>
   <Description>
    MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.[br][br]
@@ -44,3 +46,4 @@
   <Banner>http://i.imgur.com/P6RRtHH.png</Banner>
   <Icon>http://i.imgur.com/P6RRtHH.png</Icon>
 </Container>
+

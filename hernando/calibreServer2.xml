@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
+<Beta>False</Beta>
+<Category>Network:Web MediaServer:Books</Category>
   <Name>Calibre Server2</Name>
   <Description>
     [b][span style='color: #E80000;']===============================[/span][/b][br]

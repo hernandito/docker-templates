@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
   <Name>Apache-PHP-Adminer</Name>
   <Description>
     Modification of CHMB and smbion by Hernando, which is a Apache based web server set up to act as a proxy with Adminer (PHPMyAdmin type databse manager) and with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
@@ -79,4 +81,5 @@ To access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]
   <Banner>http://i.imgur.com/A1AQVll.png</Banner>
   <Icon>http://i.imgur.com/A1AQVll.png</Icon>
 </Container>
+
 
