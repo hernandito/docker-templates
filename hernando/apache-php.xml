@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
   <Name>Apache-PHP</Name>
   <Description>
     Modification of CHMB and smbion by Hernando, which is a Apache based web server set up to act as a proxy with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
@@ -64,4 +66,5 @@ Add as many tasks as you need, save the file, and [b]restart[/b] the container.[
   <Banner>http://s18.postimg.org/cyh47tklj/logo_phpapache.png</Banner>
   <Icon>http://s18.postimg.org/cyh47tklj/logo_phpapache.png</Icon>
 </Container>
+
 
