@@ -36,9 +36,9 @@
     Calibre is an e-book management software. 
   </Overview>
  
-  <Registry>https://registry.hub.docker.com/u/hernandito/calibreserver-docker</Registry>
+  <Registry>https://registry.hub.docker.com/u/hernandito/calibreserver-docker2/</Registry>
  
-  <Repository>hernandito/calibreserver-docker</Repository>
+  <Repository>hernandito/calibreserver-docker2</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
@@ -81,6 +81,6 @@
     </Volume>
   </Data>  
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <Banner>http://i.imgur.com/Ty7wZxR.png</Banner>
-  <Icon>http://i.imgur.com/Ty7wZxR.png</Icon>
+  <Banner>http://i.imgur.com/aHH93FG.png</Banner>
+  <Icon>http://i.imgur.com/aHH93FG.png</Icon>
 </Containers>
