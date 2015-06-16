@@ -4,7 +4,7 @@
   <Category>Network:Web</Category>
   <Name>ResourceSpace</Name>
   <Description>
-    ResopurceSpace DAM server software. This is a modification of CHMB and smbion by Hernando, which is a Apache based web server set up to act as a proxy with Adminer (PHPMyAdmin type databse manager) and with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
+    ResopurceSpace DAM server software. This is a modification of CHMB and smbion by Hernando[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
     [b]/web[/b] : this path is the web directory[br]
