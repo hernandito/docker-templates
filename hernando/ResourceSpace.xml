@@ -51,14 +51,8 @@ Username and password are [b]admin:admin[/b]. [br][br]
       <ContainerDir>/web</ContainerDir>
       <Mode>rw</Mode>
   </Volume>
-  
-  	<Volume>
-      <HostDir>/mnt/user/appdata/apache/www/adminer/</HostDir>
-      <ContainerDir>/web/adminer</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  
-	<Volume>
+
+  <Volume>
       <HostDir>/mnt/user/appdata/apache/logs/</HostDir>
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
