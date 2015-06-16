@@ -70,8 +70,8 @@ For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing 
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:81]/</WebUI>
-  <Banner>http://i.imgur.com/A1AQVll.png</Banner>
-  <Icon>http://i.imgur.com/A1AQVll.png</Icon>
+  <Banner>http://i.imgur.com/sRfd92M.png</Banner>
+  <Icon>http://i.imgur.com/sRfd92M.png</Icon>
 </Container>
 
 
