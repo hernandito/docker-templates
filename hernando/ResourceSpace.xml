@@ -17,6 +17,9 @@ Once you launch for first time, it will take you to a Configuration page:[br][br
 You must have an existing MySQL database available. I recommend the MariaDB docker. This must be already setup. Enter appropiate values.[br][br]
 YOU MUST ALSO HAVE A DATABASE TABLE IN YOUR DATABSE CALLED "resourcespace". Create this manually prior to saving your configuration.[br]
 [br][br]
+
+In config page, leave "MySQL binary path" empty. [br][br]
+
 For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing else... without the quotes.
 
 
