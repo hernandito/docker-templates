@@ -29,7 +29,7 @@ For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing 
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>81</HostPort>
+        <HostPort>8112</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -48,18 +48,18 @@ For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing 
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/apache/config/</HostDir>
+      <HostDir>/mnt/user/appdata/resourcespace/config/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
 	<Volume>
-      <HostDir>/mnt/user/appdata/apache/www/</HostDir>
+      <HostDir>/mnt/user/appdata/resourcespace/www/</HostDir>
       <ContainerDir>/web</ContainerDir>
       <Mode>rw</Mode>
   </Volume>
 
   <Volume>
-      <HostDir>/mnt/user/appdata/apache/logs/</HostDir>
+      <HostDir>/mnt/user/appdata/resourcespace/logs/</HostDir>
       <ContainerDir>/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -69,7 +69,7 @@ For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing 
       <Mode>ro</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:81]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
   <Banner>http://i.imgur.com/sRfd92M.png</Banner>
   <Icon>http://i.imgur.com/sRfd92M.png</Icon>
 </Container>
