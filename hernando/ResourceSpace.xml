@@ -5,7 +5,7 @@
 <Date>2015-06-17</Date>
   <Name>ResourceSpace</Name>
   <Description>
-    ResopurceSpace DAM server software. This is a modification of CHMB and smbion by Hernando[br][br]
+    ResopurceSpace DAM server software. This is a modification of CHBMB and smdion by Hernando[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
     [b]/web[/b] : this path is the web directory[br]
