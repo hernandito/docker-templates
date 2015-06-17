@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Beta>False</Beta>
-  <Category>Network:Web</Category>
+<Beta>False</Beta>
+<Category>Network:Web MediaServer:Photos</Category>
+<Date>2015-06-17</Date>
   <Name>ResourceSpace</Name>
   <Description>
     ResopurceSpace DAM server software. This is a modification of CHMB and smbion by Hernando[br][br]
