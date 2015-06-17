@@ -21,8 +21,8 @@ For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing 
 
 
   </Description>
-  <Registry>https://registry.hub.docker.com/u/hernandito/docker-apache-php-adminer/</Registry>
-  <Repository>hernandito/docker-apache-php-adminer</Repository>
+  <Registry>https://registry.hub.docker.com/u/hernandito/docker-resourcespace/</Registry>
+  <Repository>hernandito/docker-resourcespace</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
