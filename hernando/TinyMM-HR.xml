@@ -3,7 +3,7 @@
 <Beta>False</Beta>
 <Category>MediaManager</Category>
   <Name>TinyMM</Name>
-  <Description>
+  <Description>XYZ
 
     
 
@@ -12,7 +12,7 @@
    Tiny Media Manager. 
   </Overview>
  
-  <Registry>https://registry.hub.docker.com/u/romancing/tinymediamanager
+  <Registry>https://registry.hub.docker.com/u/romancing/tinymediamanager</Registry>
   <Repository>romancin/tinymediamanager:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
