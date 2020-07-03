@@ -2,17 +2,15 @@
 <Containers>
 <Beta>False</Beta>
 <Category>MediaManager</Category>
-  <Name>TinyMM-CLI</Name>
-  <Description>Command Line Interface for TinyMediaManager with Cron. Docker by coolasice1999. This is meant to be used to automatically update your sources. You must first install the regular TMM Docker to setup all your parameters. Install this docker in the SAME folder as the regular TMM docker. Once all parameters are set up and media sources added; stop that container and launch this one. Plese coolasice description here: 
-  
-  TMM is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
+  <Name>TinyMM</Name>
+  <Description>tinyMediaManager is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
   </Description>
   <Overview>
-   Tiny Media Manager  CLI with Cron. 
+   Tiny Media Manager. 
   </Overview>
  
-  <Registry>https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob/</Registry>
-  <Repository>coolasice1999/tmm-cli-cronjob:latest</Repository>
+  <Registry>https://registry.hub.docker.com/r/coolasice1999/tmm</Registry>
+  <Repository>coolasice1999/tmm:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
@@ -24,8 +22,8 @@
         <Protocol></Protocol>
       </Port>
 	    <Port>
-        <HostPort>5801</HostPort>
-        <ContainerPort>5801</ContainerPort>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
         <Protocol></Protocol>
       </Port>
 	  
@@ -36,8 +34,22 @@
       <Name>USER_ID</Name>
       <Value>0</Value>
     </Variable>
-
 	
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/NewYork</Value>
+    </Variable>
+	
+	<Variable>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Value>1380</Value>
+    </Variable>
+
+    <Variable>
+      <Name>DISPLAY_WIDTH</Name>
+      <Value>1200</Value>
+    </Variable>	
+
 	<Variable>
       <Name>PUID</Name>
       <Value>99</Value>
@@ -52,7 +64,7 @@
       <Name>UMASK</Name>
       <Value>000</Value>
     </Variable>	
-
+	
   </Environment>    
   <Data>
     <Volume>
@@ -68,6 +80,6 @@
 
   </Data>  
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
-  <Banner>https://i.imgur.com/M5Io6sF.png</Banner>
-  <Icon>https://i.imgur.com/M5Io6sF.png</Icon>
+  <Banner>https://i.imgur.com/CU1cNL6.png</Banner>
+  <Icon>https://i.imgur.com/CU1cNL6.png</Icon>
 </Containers>
