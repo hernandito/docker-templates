@@ -67,7 +67,7 @@
     </Volume> 
 
   </Data>  
-
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <Banner>https://i.imgur.com/M5Io6sF.png</Banner>
   <Icon>https://i.imgur.com/M5Io6sF.png</Icon>
 </Containers>
