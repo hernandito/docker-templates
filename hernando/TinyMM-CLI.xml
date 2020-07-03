@@ -11,7 +11,7 @@
    Tiny Media Manager  CLI with Cron. 
   </Overview>
  
-  <Registry>https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob</Registry>
+  <Registry>https://registry.hub.docker.com/r/coolasice1999/tmm-cli-cronjob/</Registry>
   <Repository>coolasice1999/tmm-cli-cronjob:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
