@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>False</Beta>
+<Category>MediaManager</Category>
+  <Name>TinyMM-CLI</Name>
+  <Description>Command Line Interface for TinyMediaManager with Cron. Docker by coolasice1999. This is meant to be used to automatically update your sources. You must first install the regular TMM Docker to setup all your parameters. Install this docker in the SAME folder as the regular TMM docker. Once all parameters are set up and media sources added; stop that container and launch this one. Plesee coolasice description here: https://forums.unraid.net/topic/91829-tinymediamanager-docker/?do=findComment&comment=852858
+  
+  TMM is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
+  </Description>
+  <Overview>
+   Tiny Media Manager  CLI with Cron. 
+  </Overview>
+ 
+  <Registry>https://registry.hub.docker.com/u/coolasice1999/tmm-cli-cronjob</Registry>
+  <Repository>coolasice1999/tmm-cli-cronjob:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	    <Port>
+        <HostPort>5801</HostPort>
+        <ContainerPort>5801</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	  
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>USER_ID</Name>
+      <Value>0</Value>
+    </Variable>
+
+	
+	<Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+
+    <Variable>
+      <Name>GUID</Name>
+      <Value>100</Value>
+    </Variable>	
+
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>	
+
+  </Environment>    
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+     <Volume>
+      <HostDir>/mnt/cache/appdata/tmm/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 
+
+  </Data>  
+
+  <Banner>https://i.imgur.com/M5Io6sF.png</Banner>
+  <Icon>https://i.imgur.com/M5Io6sF.png</Icon>
+</Containers>
