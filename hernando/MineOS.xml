@@ -37,7 +37,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/appdata/minecraftos/</HostDir>
+      <HostDir>/mnt/user/appdata/minecraftos/</HostDir>
       <ContainerDir>/var/games/minecraft</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
