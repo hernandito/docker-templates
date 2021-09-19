@@ -54,18 +54,17 @@
     </Variable>	
 
   </Environment>    
-  <Data>
+  <Data> 
     <Volume>
       <HostDir>/mnt/user/Media/</HostDir>
       <ContainerDir>/media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
      <Volume>
-      <HostDir>/mnt/cache/appdata/tmm/config/</HostDir>
+      <HostDir>/mnt/cache/appdata/tmm-cli/config/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
-    </Volume> 
-
+    </Volume> 	  
   </Data>  
   <WebUI>http://[IP]:[PORT:5800]</WebUI>
   <Banner>https://i.imgur.com/M5Io6sF.png</Banner>
