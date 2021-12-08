@@ -12,15 +12,7 @@
   <Overview>DESCRIPTION&#xD;
 A simple selfhosted URL shortener with no unnecessary features.&#xD;
 &#xD;
-Features:&#xD;
-&#x2022; Shortens URLs of any length to a fixed length, randomly generated string&#xD;
-&#x2022; Allows you to specify the shortened URL instead of the generated (optional) one (Missing in a surprising number of alternatives)&#xD;
-&#x2022; Opening the fixed length URL in your browser will instantly redirect you to the correct long URL (you'd think that's a standard feature, but apparently it's not)&#xD;
-&#x2022; Provides a simple API for adding new short links&#xD;
-&#x2022; Links are stored in an SQLite database&#xD;
-&#x2022; Available as a Docker container&#xD;
-&#x2022; Backend written in Java using Spark Java, frontend written in plain HTML and vanilla JS, using Pure CSS for styling&#xD;
-&#xD;
+Edited by Hernandito
 NOTES&#xD;
 &#x2022; Default credentials for WebUI: unraid/unraid (user/pass).&#xD;
 &#xD;
