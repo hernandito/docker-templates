@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Simply-Shorten</Name>
+  <Repository>draganczukp/simply-shorten</Repository>
+  <Registry>https://hub.docker.com/r/draganczukp/simply-shorten</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/116805-support-smartphonelover-simply-shorten/</Support>
+  <Project>https://gitlab.com/draganczukp/simply-shorten</Project>
+  <Overview>DESCRIPTION&#xD;
+A simple selfhosted URL shortener with no unnecessary features.&#xD;
+&#xD;
+Features:&#xD;
+&#x2022; Shortens URLs of any length to a fixed length, randomly generated string&#xD;
+&#x2022; Allows you to specify the shortened URL instead of the generated (optional) one (Missing in a surprising number of alternatives)&#xD;
+&#x2022; Opening the fixed length URL in your browser will instantly redirect you to the correct long URL (you'd think that's a standard feature, but apparently it's not)&#xD;
+&#x2022; Provides a simple API for adding new short links&#xD;
+&#x2022; Links are stored in an SQLite database&#xD;
+&#x2022; Available as a Docker container&#xD;
+&#x2022; Backend written in Java using Spark Java, frontend written in plain HTML and vanilla JS, using Pure CSS for styling&#xD;
+&#xD;
+NOTES&#xD;
+&#x2022; Default credentials for WebUI: unraid/unraid (user/pass).&#xD;
+&#xD;
+VERSION&#xD;
+1.0 (2021-12-04)</Overview>
+  <Category>Cloud: Productivity: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:4567]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/SmartPhoneLover/unraid-docker-templates/main/templates/icons/simply-shorten_200x200.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1638643242</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="4567" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4567</Config>
+  <Config Name="Username" Target="username" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">unraid</Config>
+  <Config Name="Password" Target="password" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">unraid</Config>
+  
+    <Data> 
+    <Volume>
+      <HostDir>/mnt/cache/appdata/simplyshorten/</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+   </Data>
+  
+</Container>
