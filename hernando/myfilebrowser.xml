@@ -20,8 +20,15 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
-    <Mode>Custom: br0</Mode>
-
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4324</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	  
+    </Publish>
   </Networking>
   <Environment>
   
@@ -71,7 +78,7 @@
 
 
   </Data>  
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:4324]</WebUI>
   <Banner>https://i.imgur.com/SuoQjQW.png</Banner>
   <Icon>https://i.imgur.com/SuoQjQW.png</Icon>
 </Containers>
