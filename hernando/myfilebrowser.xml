@@ -21,14 +21,7 @@
   <Privileged>false</Privileged>
     <Networking>
     <Mode>Custom: br0</Mode>
-    <Publish>
-      <Port>
-        <HostPort>80</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol></Protocol>
-      </Port>
-	  
-    </Publish>
+
   </Networking>
   <Environment>
   
