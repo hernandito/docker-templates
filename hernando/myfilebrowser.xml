@@ -20,7 +20,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
-    <Mode>br0</Mode>
+    <Mode>custom</Mode>
     <Publish>
       <Port>
         <HostPort>80</HostPort>
