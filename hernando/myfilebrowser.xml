@@ -3,12 +3,12 @@
 <Beta>False</Beta>
 <Category>Utilities</Category>
   <Name>MyFileBrowser</Name>
-  <Description>A modification of the excellent <b>filebrowser</b>. Edited to change some of the default colors and elements.
-  <br><br>
-  <b>DANGER WILL ROBINSON!!!!</b>
+  <Description>A modification of the excellent filebrowser. Edited to change some of the default colors and elements.
+  
+  DANGER WILL ROBINSON!!!!
   If this current default, this exposes the entire unRAID file structure. You MUST make sure this container is NOT open to the internet.
-   <br><br>
-   Dafault username and password: admin/admin
+   
+   Default username and password: admin/admin
   
   </Description>
   <Overview>
