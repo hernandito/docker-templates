@@ -10,15 +10,7 @@
   <Support></Support>
   <Project>https://github.com/filebrowser/filebrowser</Project>
   <Overview>File Browser - Webbased File Browser including sharing functions etc.&#xD;
-&#xD;
-https://github.com/filebrowser/filebrowser&#xD;
-&#xD;
-Just Mount other Folder to/srv&#xD;
-Example&#xD;
-/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
-/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
-&#xD;
-Read&#xD;
+
 https://docs.filebrowser.xyz/configuration for the config</Overview>
   <Category>Cloud: Network:Web</Category>
   <WebUI>http://[IP]/files/</WebUI>
@@ -30,16 +22,7 @@ https://docs.filebrowser.xyz/configuration for the config</Overview>
   <DateInstalled>1639260045</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>File Browser - Webbased File Browser including sharing functions etc.&#xD;
-&#xD;
-https://github.com/filebrowser/filebrowser&#xD;
-&#xD;
-Just Mount other Folder to/srv&#xD;
-Example&#xD;
-/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
-/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
-&#xD;
-Read&#xD;
+  <Description>File Browser - Webbased File Browser including sharing functions etc.
 https://docs.filebrowser.xyz/configuration for the config</Description>
   <Networking>
     <Mode>br0</Mode>
