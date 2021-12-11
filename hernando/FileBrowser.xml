@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileBrowser</Name>
+  <Repository>hernandito/filebrowser</Repository>
+  <Registry>https://hub.docker.com/r/hernandito/filebrowser</Registry>
+  <Network>br0</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>https://github.com/filebrowser/filebrowser</Project>
+  <Overview>File Browser - Webbased File Browser including sharing functions etc.&#xD;
+&#xD;
+https://github.com/filebrowser/filebrowser&#xD;
+&#xD;
+Just Mount other Folder to/srv&#xD;
+Example&#xD;
+/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
+/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
+&#xD;
+Read&#xD;
+https://docs.filebrowser.xyz/configuration for the config</Overview>
+  <Category>Cloud: Network:Web</Category>
+  <WebUI>http://[IP]/files/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-filebrowser.xml</TemplateURL>
+  <Icon>https://github.com/maschhoff/docker/raw/master/filebrowser/35781395.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-d /db/database.db</PostArgs>
+  <CPUset/>
+  <DateInstalled>1639260045</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>File Browser - Webbased File Browser including sharing functions etc.&#xD;
+&#xD;
+https://github.com/filebrowser/filebrowser&#xD;
+&#xD;
+Just Mount other Folder to/srv&#xD;
+Example&#xD;
+/mnt/user/Media/ &amp;gt; /srv/Media&#xD;
+/mnt/user/Docs/ &amp;gt; /srv/Docs&#xD;
+&#xD;
+Read&#xD;
+https://docs.filebrowser.xyz/configuration for the config</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/srv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filebrowser/db/</HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filebrowser/app/</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/srv" Default="" Mode="rw" Description="Container Path: /srv" Type="Path" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="Host Path 2" Target="/db" Default="" Mode="rw" Description="Container Path: /db/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/filebrowser/db/</Config>
+  <Config Name="Host Path 3" Target="/app" Default="" Mode="rw" Description="Container Path: /db/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/filebrowser/app/</Container>
