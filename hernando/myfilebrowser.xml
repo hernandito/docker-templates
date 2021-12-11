@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>False</Beta>
+<Category>Utilities</Category>
+  <Name>MyFileBrowser</Name>
+  <Description>A modification of the excellent <b>filebrowser</b>. Edited to change some of the default colors and elements.
+  <br><br>
+  <b>DANGER WILL ROBINSON!!!!</b>
+  If this current default, this exposes the entire unRAID file structure. You MUST make sure this container is NOT open to the internet.
+   <br><br>
+   Dafault username and password: admin/admin
+  
+  </Description>
+  <Overview>
+   Myfilebrowser 
+  </Overview>
+ 
+  <Registry>https://registry.hub.docker.com/u/hernandito/myfilebrowser/</Registry>
+  <Repository>hernandito/myfilebrowser:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	  
+    </Publish>
+  </Networking>
+  <Environment>
+  
+    <Variable>
+      <Name>USER_ID</Name>
+      <Value>0</Value>
+    </Variable>
+	
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/NewYork</Value>
+    </Variable>
+	
+
+	<Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+
+    <Variable>
+      <Name>GUID</Name>
+      <Value>100</Value>
+    </Variable>	
+
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>	
+	
+  </Environment>    
+  <Data>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/srv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+     <Volume>
+      <HostDir>/mnt/cache/appdata/myfilebrowser/app/</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 
+     <Volume>
+      <HostDir>/mnt/cache/appdata/myfilebrowser/db/</HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 
+
+
+  </Data>  
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <Banner>https://i.imgur.com/SuoQjQW.png</Banner>
+  <Icon>https://i.imgur.com/SuoQjQW.png</Icon>
+</Containers>
