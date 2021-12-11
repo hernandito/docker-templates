@@ -78,7 +78,7 @@
 
 
   </Data>  
-  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Banner>https://i.imgur.com/SuoQjQW.png</Banner>
   <Icon>https://i.imgur.com/SuoQjQW.png</Icon>
 </Containers>
