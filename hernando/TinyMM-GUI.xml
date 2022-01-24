@@ -10,7 +10,7 @@
   </Overview>
  
   <Registry>https://registry.hub.docker.com/r/coolasice1999/tmm</Registry>
-  <Repository>coolasice1999/tmm:latest</Repository>
+  <Repository>romancin/tinymediamanager:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
