@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CloudCommander</Name>
+  <Repository>hernandito/cloudcommander</Repository>   
+  <Registry>https://hub.docker.com/r/coderaiser/cloudcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project/>
+  <Overview>
+CloudCommander Hernandito is a simple web file browser with a built in text editor and archive compress/extract abilities. This version has been formatted to use the Alpine base. It  has a modified, modern WebUI and includes shortcut links to your most used folders..
+
+
+Instructions:
+
+Set Port to the port you want to be able to access from. Defaults to 8765. It is highly advisable that this is chanve to a custom network (br0) and assign iit an IP that is NOT the same as your unRAID server. Make sure this is NOT exposed to to the internet.
+
+
+Set Mount Point to the directory you want to be able to access in the browser. Defaults to /mnt/user, all shares.
+
+.
+
+
+You can customize the buttons on the WebUI by going to your CloudCommander's appdata folder and edit the "index.html" file. After you have made you changes, you will need to go into the Docker's CLI and type the following command:
+
+"update.sh"
+
+
+You will need to re-start your CloudCommander docker to see your changes.
+
+
+	</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/cloudcmd.xml</TemplateURL>
+  <Icon>https://i.imgur.com/Ng2rkTL.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1641245969</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+[b]CloudCommander[/b] is a simple web file browser with a built in text editor and archive compress/extract abilities.[br/]&#xD;
+&#xD;
+]Instructions:&#xD;
+Set Port to the port you want to be able to access from. Defaults to 8765[br/]&#xD;
+Set Mount Point to the directory you want to be able to access in the browser. Defaults to /mnt/user, all shares[br/]&#xD;
+	</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/UNRAID</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/cloudcmd2</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+
+
+  <Labels/>
+    <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+	<Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+
+	
+	<Config Name="Config" Target="/config" Default="/mnt/cache/appdata/cloudcmd" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/cloudcmd</Config>
+	<Config Name="Mount Path" Target="/UNRAID" Default="/" Mode="rw" Description="Container Path: /UNRAID" Type="Path" Display="always" Required="true" Mask="false">/</Config>
+	<Config Name="HOME - Dont Change!" Target="HOME" Default="" Mode="" Description="Container Variable: HOME" Type="Variable" Display="always" Required="true" Mask="false">/root</Config>	
+	<Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+
+
+	
+</Container>
