@@ -34,13 +34,9 @@
   <Environment>
     <Variable>
       <Name>USER_ID</Name>
-      <Value>99</Value>
+      <Value>0</Value>
     </Variable>
 
-    <Variable>
-      <Name>GROUP_ID</Name>
-      <Value>100</Value>
-    </Variable>	
 	
 	<Variable>
       <Name>PUID</Name>
