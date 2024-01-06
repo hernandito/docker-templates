@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>False</Beta>
+<Category>MediaManager</Category>
+  <Name>TinyMM-GUIv4</Name>
+  <Description>GUI for TinyMediaManager v. 4. Docker by coolasice1999. You must first install the regular TMM Docker to setup all your parameters. Install this docker in the SAME folder as the regular TMM docker. Once all parameters are set up and media sources added; stop that container and launch this one. Plese coolasice description here: 
+  
+  TMM is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
+  </Description>
+  <Overview>
+   Tiny Media Manager V.4 GUI. 
+  </Overview>
+ 
+  <Registry>https://registry.hub.docker.com/r/coolasice1999/tmmcliv4/</Registry>
+  <Repository>coolasice1999/tmmcliv4</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5803</HostPort>
+        <ContainerPort>5803</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	    <Port>
+        <HostPort>5802</HostPort>
+        <ContainerPort>5802</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	  
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>USER_ID</Name>
+      <Value>99</Value>
+    </Variable>
+
+    <Variable>
+      <Name>GROUP_ID</Name>
+      <Value>100</Value>
+    </Variable>	
+	
+	<Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+
+    <Variable>
+      <Name>GUID</Name>
+      <Value>100</Value>
+    </Variable>	
+
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>	
+
+  </Environment>    
+  <Data> 
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+     <Volume>
+      <HostDir>/mnt/cache/appdata/tmm-cli4/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 	  
+  </Data>  
+  <WebUI>http://[IP]:[PORT:5802]</WebUI>
+  <Banner>https://i.imgur.com/M5Io6sF.png</Banner>
+  <Icon>https://i.imgur.com/M5Io6sF.png</Icon>
+</Containers>
