@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Beta>False</Beta>
+<Category>MediaManager</Category>
+  <Name>TinyMM</Name>
+  <Description>tinyMediaManager is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
+  
+
+  </Description>
+  <Overview>
+   Tiny Media Manager. 
+  </Overview>
+ 
+  <Registry>https://registry.hub.docker.com/r/tinymediamanager/tinymediamanager</Registry>
+  <Repository>tinymediamanager/tinymediamanager:4-latest
+  </Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	    <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+	  
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>USER_ID</Name>
+      <Value>1000</Value>
+    </Variable>
+	
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/NewYork</Value>
+    </Variable>
+	
+
+	<Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+
+    <Variable>
+      <Name>GUID</Name>
+      <Value>100</Value>
+    </Variable>	
+
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>	
+	
+  </Environment>    
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/tmm4/config/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	
+     <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/media/movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 
+	
+     <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/media/tv-_shows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume> 
+	
+  </Data>  
+  <WebUI>http://[IP]:[PORT:4000]</WebUI>
+  <Banner>https://i.imgur.com/CU1cNL6.png</Banner>
+  <Icon>https://i.imgur.com/CU1cNL6.png</Icon>
+</Containers>
