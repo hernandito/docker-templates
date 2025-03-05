@@ -4,7 +4,6 @@
 <Category>MediaManager</Category>
   <Name>TinyMM-GUIv5</Name>
   <Description>tinyMediaManager is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
-  
 
   </Description>
   <Overview>
