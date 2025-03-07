@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TinyFileManager</Name>
+  <Repository>moonbuggy2000/tinyfilemanager:latest</Repository>
+  <Registry>https://hub.docker.com/r/moonbuggy2000/tinyfilemanager</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hernandito/docker-templates/tree/master</Support>
+  <Project>https://github.com/prasathmani/tinyfilemanager</Project>
+  <Overview>TinyFileManager is a versatile web-based PHP file manager designed for simplicity and efficiency. This lightweight single-file PHP application can be effortlessly integrated into any server directory, allowing users to store, upload, edit, and manage files and folders directly through their web browser. With multi-language support and compatibility with PHP 5.5+, TinyFileManager enables the creation of individual user accounts, each with its dedicated directory. The platform also includes built-in functionality for handling text files using the Cloud9 IDE. Featuring syntax highlighting for over 150 languages and more than 35 themes, TinyFileManager offers a comprehensive solution for file management in an online environment.</Overview>
+  <Category></Category>
+  <WebUI>http://192.168.0.201:2112</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/refs/heads/master/hernando/TinyFileManager.xml</TemplateURL>
+  <Icon>https://i.imgur.com/DF8Zdpk.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1718149993</DateInstalled>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <Requires/>
+  <Config Name="WebUI" Target="8080" Default="2112" Mode="tcp" Description="Web UI." Type="Port" Display="always" Required="true" Mask="false">2112</Config>
+
+  <Config Name="WebUI" Target="8081" Default="2113" Mode="tcp" Description="Web UI." Type="Port" Display="always" Required="true" Mask="false">2113</Config>
+
+  <Config Name="Path:/var/www/html/files" Target="/var/www/html/files" Default="" Mode="rw" Description="Local save data." Type="Path" Display="always" Required="true" Mask="false">/mnt/</Config>
+
+
+  <Config Name="TZ" Target="TZ" Default="America/NewYork" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">America/NewYork</Config>
+  <Config Name="NGINX_LOG_ALL" Target="NGINX_LOG_ALL" Default="false" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">false</Config>  
+  <Config Name="TFM_HTTP_HOST" Target="TFM_HTTP_HOST" Default="\'host.local\'" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">\'host.local\'</Config>  
+  
+
+  <Config Name="USER_ID" Target="PUID" Default="1000" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="GROUP_ID" Target="PGID" Default="1000" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+ 
+</Container>
