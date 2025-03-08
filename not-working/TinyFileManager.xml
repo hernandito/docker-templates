@@ -28,9 +28,9 @@
   <Config Name="Path:/var/www/html/files" Target="/var/www/html/files" Default="" Mode="rw" Description="Local save data." Type="Path" Display="always" Required="true" Mask="false">/mnt/</Config>
 
 
-  <Config Name="TZ" Target="TZ" Default="America/NewYork" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">America/NewYork</Config>
+  <Config Name="TZ" Target="TZ" Default="America/NewYork" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">America/New_York</Config>
   <Config Name="NGINX_LOG_ALL" Target="NGINX_LOG_ALL" Default="false" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">false</Config>  
-  <Config Name="TFM_HTTP_HOST" Target="TFM_HTTP_HOST" Default="\'host.local\'" Mode="{3}" Description="" Type="Variable" Required="true" Mask="false">\'host.local\'</Config>  
+  <Config Name="TFM_HTTP_HOST" Target="TFM_HTTP_HOST" Default="\'host.local\'" Mode="{3}" Description="" Type="Variable" Required="false" Mask="false">\'host.local\'</Config>  
   
 
   <Config Name="USER_ID" Target="PUID" Default="1000" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
