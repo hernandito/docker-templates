@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+    <Name>zurg-testing</Name>
+    <Repository>ghcr.io/debridmediamanager/zurg-testing:latest</Repository>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/debridmediamanager/zurg-testing</Support>
+    <Project>https://github.com/debridmediamanager/zurg-testing</Project>
+    <Overview>Zurg is a testing Docker for Debrid Media Manager.</Overview>
+    <Category>MediaApp:Tools</Category>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
+    <Icon>https://raw.githubusercontent.com/debridmediamanager/zurg-testing/main/icon.png</Icon>
+    <ExtraParams></ExtraParams>
+    <Environment>
+        <Variable>
+            <Name>PUID</Name>
+            <Value>99</Value>
+            <Description>Set the user ID</Description>
+        </Variable>
+        <Variable>
+            <Name>PGID</Name>
+            <Value>100</Value>
+            <Description>Set the group ID</Description>
+        </Variable>
+        <Variable>
+            <Name>TZ</Name>
+            <Value>America/New_York</Value>
+            <Description>Set the timezone</Description>
+        </Variable>
+    </Environment>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/zurg-testing</HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/downloadcache/real-debrid</HostDir>
+            <ContainerDir>/real-debrid</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+    </Port>
+</Container>
