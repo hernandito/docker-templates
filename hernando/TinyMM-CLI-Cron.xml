@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
 <Beta>False</Beta>
-<Category>MediaManager</Category>
+<Category>MediaServer:</Category>
   <Name>TinyMM-CLI</Name>
   <Description>Command Line Interface for TinyMediaManager with Cron. Docker by coolasice1999. This is meant to be used to automatically update your sources. You must first install the regular TMM Docker to setup all your parameters. Install this docker in the SAME folder as the regular TMM docker. Once all parameters are set up and media sources added; stop that container and launch this one. Plese coolasice description here: 
   
