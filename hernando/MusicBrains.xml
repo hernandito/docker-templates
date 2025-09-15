@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Container>
+  <Name>musicbrainz</Name>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <Repository>lscr.io/linuxserver/musicbrainz</Repository>
+  <Registry>lscr.io</Registry>
+  <Overview>MusicBrainz (LinuxServer single-container image). Note: LSIO image is deprecated; for full production consider MetaBrainz' docker-compose.</Overview>
+  <Network>bridge</Network>
+  <MyIP></MyIP>
+  <Support>https://docs.linuxserver.io/images/docker-musicbrainz</Support>
+  <Project>https://github.com/linuxserver/docker-musicbrainz</Project>
+  <Version>latest</Version>
+  <Author>YourName</Author>
+  <Email></Email>
+  <Icon></Icon>
+
+  <!-- Optional extra docker run parameters -->
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+
+  <!-- Port mappings -->
+  <Port>
+    <HostPort>5000</HostPort>
+    <ContainerPort>5000</ContainerPort>
+    <Protocol>tcp</Protocol>
+  </Port>
+
+  <!-- Host path folders - change to where you keep appdata -->
+  <Volume>
+    <HostDir>/mnt/user/appdata/musicbrainz/config</HostDir>
+    <HostDirOptions></HostDirOptions>
+    <ContainerDir>/config</ContainerDir>
+    <Mode>rw</Mode>
+  </Volume>
+
+  <Volume>
+    <HostDir>/mnt/user/appdata/musicbrainz/data</HostDir>
+    <HostDirOptions></HostDirOptions>
+    <ContainerDir>/data</ContainerDir>
+    <Mode>rw</Mode>
+  </Volume>
+
+  <!-- Environment variables -->
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>1000</Value>
+      <Description>Host user id to run the container as</Description>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>1000</Value>
+      <Description>Host group id to run the container as</Description>
+    </Variable>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+      <Description>Timezone</Description>
+    </Variable>
+    <Variable>
+      <Name>BRAINZCODE</Name>
+      <Value></Value>
+      <Description>MusicBrainz registration code (required to receive DB updates) — get from MusicBrainz site</Description>
+    </Variable>
+    <Variable>
+      <Name>WEBADDRESS</Name>
+      <Value></Value>
+      <Description>Host IP (no port) used to render CSS correctly — e.g. 192.168.1.50</Description>
+    </Variable>
+    <Variable>
+      <Name>NPROC</Name>
+      <Value>5</Value>
+      <Description>Optional: number of worker processes (defaults to 5 if unset)</Description>
+    </Variable>
+  </Environment>
+
+  <!-- Devices & capabilities (none required for normal use) -->
+  <Device />
+  <Capability />
+
+  <!-- Extra metadata -->
+  <Note>After first startup the container will initialise and import the DB — this can take a long time (many GBs). If using UNRAID cache issues were reported: use /mnt/cache/appdata rather than /mnt/user/cache/appdata.</Note>
+
+</Container>
