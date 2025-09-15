@@ -68,10 +68,11 @@
       <Value>000</Value>
     </Variable>	
 
+    <Variable>
     <Name>LC_ALL</Name>
       <Value>en_US.UTF-8</Value>
     </Variable>
-
+    <Variable>
     <Name>LANG</Name>
       <Value>en_US.UTF-8</Value>
     </Variable>
