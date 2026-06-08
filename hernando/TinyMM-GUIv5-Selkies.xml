@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>TinyMM-GUIv5-Selkies</Name>
+
+  <Repository>hernandito/tinymm5-selkies:latest</Repository>
+  <Registry>https://hub.docker.com/r/hernandito/tinymm5-selkies</Registry>
+
+  <Network>bridge</Network>
+  <MyIP />
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+
+  <Support>https://github.com/hernandito/docker-templates/issues</Support>
+  <Project>https://www.tinymediamanager.org/</Project>
+  <ReadMe>https://hub.docker.com/r/hernandito/tinymm5-selkies</ReadMe>
+
+  <Overview>Unofficial tinyMediaManager v5 Docker image with a LinuxServer Selkies browser-based desktop interface. Provides a modern HTTPS WebUI as an alternative to the official noVNC container, persistent appdata storage, editable media mappings, and optional HTTP API access for automation.</Overview>
+
+  <Description>tinyMediaManager with a LinuxServer Selkies browser-based desktop interface.
+
+This unofficial community image provides tinyMediaManager v5 in a modern browser-accessible Linux desktop environment using the LinuxServer Selkies base image. It is intended as an alternative to the official tinyMediaManager Docker image for users who prefer the Selkies WebUI instead of the standard noVNC interface.
+
+tinyMediaManager is a full-featured media management application for organizing movies and television shows, scraping metadata, downloading artwork, editing NFO files, renaming media files, and preparing libraries for Kodi, Plex, Emby, Jellyfin, and other compatible media-center applications.
+
+The Selkies WebUI is accessed through HTTPS. Because the container uses a self-signed certificate by default, your browser may display a security warning the first time you open the interface on your local network. This is expected. The container is intended for trusted LAN use and should not be exposed directly to the public internet.
+
+The tinyMediaManager data folder is intentionally mapped to two internal paths so that the same physical appdata folder works correctly with both tinyMediaManager Docker-style and Linux-style storage locations. This does not create duplicate copies of your library database.
+
+This image is not maintained or supported by the tinyMediaManager project or LinuxServer.io.</Description>
+
+  <Category>MediaApp:Video Tools:Utilities</Category>
+
+  <WebUI>https://[IP]:[PORT:3001]/</WebUI>
+
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/TinyMM-GUIv5-Selkies.xml</TemplateURL>
+
+  <Icon>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/tmmv5-icon.png</Icon>
+
+  <ExtraParams>--shm-size=6gb</ExtraParams>
+
+  <Requires>This container is intended for trusted LAN use. The Selkies WebUI uses HTTPS with a self-signed certificate by default, so a browser warning is expected on first access. Do not expose the WebUI directly to the public internet.</Requires>
+
+  <Config Name="Selkies HTTPS WebUI" Target="3001" Default="4066" Mode="tcp" Description="HTTPS port for the Selkies browser desktop. A self-signed certificate warning is expected on first access." Type="Port" Display="always" Required="true" Mask="false">4066</Config>
+
+  <Config Name="tinyMediaManager HTTP API" Target="7878" Default="7890" Mode="tcp" Description="Optional tinyMediaManager HTTP API port for automation scripts." Type="Port" Display="always" Required="false" Mask="false">7890</Config>
+
+  <Config Name="Selkies Config" Target="/config" Default="/mnt/user/appdata/tinymm5-selkies/config/" Mode="rw" Description="Persistent Selkies configuration, certificate files, and browser-desktop settings." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tinymm5-selkies/config/</Config>
+
+  <Config Name="tinyMediaManager Appdata" Target="/data" Default="/mnt/user/appdata/tinymm5-selkies/data/" Mode="rw" Description="Persistent tinyMediaManager database, settings, cache, logs, backups, and license file." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tinymm5-selkies/data/</Config>
+
+  <Config Name="tinyMediaManager Linux Data Path" Target="/config/.local/share/tinyMediaManager" Default="/mnt/user/appdata/tinymm5-selkies/data/" Mode="rw" Description="Must point to the same host folder as tinyMediaManager Appdata. This intentionally exposes the same files at TMM's Linux storage path without duplicating data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tinymm5-selkies/data/</Config>
+
+  <Config Name="Movies" Target="/media/movies" Default="/mnt/user/Media/Movies/" Mode="rw" Description="Host folder containing your movie library." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/Movies/</Config>
+
+  <Config Name="TV Shows" Target="/media/tvshows" Default="/mnt/user/Media/TV/" Mode="rw" Description="Host folder containing your television library." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/TV/</Config>
+
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID used to run the container. The standard unRAID nobody user is 99." Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID used to run the container. The standard unRAID users group is 100." Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+
+  <Config Name="Timezone" Target="TZ" Default="Etc/UTC" Mode="" Description="Container timezone. Change this to your local IANA timezone if desired." Type="Variable" Display="advanced" Required="false" Mask="false">Etc/UTC</Config>
+
+  <Config Name="Locale" Target="LC_ALL" Default="en_US.UTF-8" Mode="" Description="Container locale." Type="Variable" Display="advanced" Required="false" Mask="false">en_US.UTF-8</Config>
+
+  <Config Name="Language" Target="LANG" Default="en_US.UTF-8" Mode="" Description="Container language." Type="Variable" Display="advanced" Required="false" Mask="false">en_US.UTF-8</Config>
+
+  <Config Name="Browser Tab Title" Target="TITLE" Default="tinyMediaManager" Mode="" Description="Title displayed in the browser tab." Type="Variable" Display="advanced" Required="false" Mask="false">tinyMediaManager</Config>
+
+  <Config Name="Selkies Sidebar Title" Target="SELKIES_UI_TITLE" Default="tinyMediaManager" Mode="" Description="Title displayed in the Selkies sidebar." Type="Variable" Display="advanced" Required="false" Mask="false">tinyMediaManager</Config>
+
+  <Config Name="Use CSS Scaling" Target="SELKIES_USE_CSS_SCALING" Default="false" Mode="" Description="Leave disabled for a sharper desktop image. High-density displays can be tuned from the Selkies sidebar." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+
+  <Config Name="Interface DPI" Target="SELKIES_SCALING_DPI" Default="96" Mode="" Description="Desktop interface DPI. The general default is 96. Lower or raise this value if the interface is too large or too small." Type="Variable" Display="advanced" Required="false" Mask="false">96</Config>
+
+  <Config Name="Selkies Username" Target="CUSTOM_USER" Default="" Mode="" Description="Optional username for the Selkies WebUI. Leave blank for no username." Type="Variable" Display="advanced" Required="false" Mask="false" />
+
+  <Config Name="Selkies Password" Target="PASSWORD" Default="" Mode="" Description="Optional password for the Selkies WebUI. Leave blank for no password." Type="Variable" Display="advanced" Required="false" Mask="true" />
+
+</Container>
