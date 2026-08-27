@@ -5,4 +5,9 @@
     This repository contains installation metadata for Docker applications and Unraid plugins.
   </Profile>
   <WebPage>https://github.com/hernandito/docker-templates</WebPage>
+
+  <DonateLink>https://buymeacoffee.com/hernandito</DonateLink>
+  <DonateText>Buy me a coffee</DonateText>
+
+
 </CommunityApplications>
