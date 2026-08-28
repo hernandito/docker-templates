@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
-  <Name>TinyMM-GUIv5-Selkies</Name>
+  <Name>TinyMM v.5 - Selkies Verson</Name>
 
   <Repository>hernandito/tinymm5-selkies:latest</Repository>
   <Registry>https://hub.docker.com/r/hernandito/tinymm5-selkies</Registry>
