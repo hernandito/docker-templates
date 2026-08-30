@@ -2,12 +2,12 @@
 <Containers>
 <Beta>False</Beta>
 <Category>MediaManager</Category>
-  <Name>TinyMM v.5 - NoVNC Version</Name>
+  <Name>TinyMM v.5 noVNC Version</Name>
   <Description>TinyMediaManager is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server. Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
 
   </Description>
   <Overview>
-   Tiny Media Manager. 
+   Tiny Media Manager v.5. 
   </Overview>
  
   <Registry>https://hub.docker.com/r/tinymediamanager/tinymediamanager</Registry>
