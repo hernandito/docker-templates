@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/ahmetoner/whisper-asr-webservice/issues</Support>
   <Project>https://github.com/ahmetoner/whisper-asr-webservice</Project>
-  <Overview>Whisper ASR Webservice using the faster-whisper engine, exposing an HTTP API that returns word-level timestamps. Used by SubSyncarr to generate AI subtitles from audio (transcribe or translate-to-English). GPU accelerated. Models are stored on the host (ASR_MODEL_PATH) so they are NOT baked into the docker image.</Overview>
+  <Overview>Whisper ASR Webservice using the faster-whisper engine, exposing an HTTP API that returns word-level timestamps. GPU accelerated. Models are stored on the host (ASR_MODEL_PATH) so they are NOT baked into the docker image.</Overview>
   <Category>MediaApp:Other Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:9000]/docs</WebUI>
   <TemplateURL/>
