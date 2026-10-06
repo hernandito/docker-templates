@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Whisper-asr</Name>
+  <Repository>onerahmet/openai-whisper-asr-webservice:latest-gpu</Repository>
+  <Registry>https://registry.hub.docker.com/r/onerahmet/openai-whisper-asr-webservice/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ahmetoner/whisper-asr-webservice/issues</Support>
+  <Project>https://github.com/ahmetoner/whisper-asr-webservice</Project>
+  <Overview>GPU accelerated Whisper ASR Webservice using the faster-whisper engine, exposing an HTTP API that returns word-level timestamps. Models are stored on the host (ASR_MODEL_PATH) so they are NOT baked into the docker image.</Overview>
+  <Category>MediaApp:Other Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:9000]/docs</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/whisper-asr.png</Icon>
+  <ExtraParams>--gpus all</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Requires the unRAID "Nvidia Driver" plugin and an NVIDIA GPU. First start downloads the model (large-v3 ~3 GB) to the Models path below. On a 6GB card keep ASR_QUANTIZATION=int8.</Requires>
+  <Config Name="WebUI / API Port" Target="9000" Default="9000" Mode="tcp" Description="HTTP API + Swagger docs (http://host:9000/docs)" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="ASR_ENGINE" Target="ASR_ENGINE" Default="faster_whisper" Mode="" Description="Engine: openai_whisper, faster_whisper, or whisperx. Use faster_whisper." Type="Variable" Display="always" Required="true" Mask="false">faster_whisper</Config>
+  <Config Name="ASR_MODEL" Target="ASR_MODEL" Default="large-v3" Mode="" Description="Model: tiny, base, small, medium, large-v3. Larger = more accurate + more VRAM." Type="Variable" Display="always" Required="true" Mask="false">large-v3</Config>
+  <Config Name="ASR_QUANTIZATION" Target="ASR_QUANTIZATION" Default="int8" Mode="" Description="Model precision: float32, float16, int8. On GPU this DEFAULTS to float32 (huge). Use int8 so large-v3 fits in ~2.5GB VRAM (needed for 6GB cards like a GTX 1660 Ti); use float16 on bigger cards for max accuracy." Type="Variable" Display="always" Required="true" Mask="false">int8</Config>
+  <Config Name="ASR_MODEL_PATH" Target="ASR_MODEL_PATH" Default="/data/whisper" Mode="" Description="Where models are stored INSIDE the container. Must match the Models host-path mapping below so models persist on disk instead of bloating the docker image." Type="Variable" Display="always" Required="true" Mask="false">/data/whisper</Config>
+  <Config Name="ASR_DEVICE" Target="ASR_DEVICE" Default="cuda" Mode="" Description="cuda (GPU) or cpu." Type="Variable" Display="always" Required="true" Mask="false">cuda</Config>
+  <Config Name="Models" Target="/data/whisper" Default="/mnt/cache/appdata/whisper-asr" Mode="rw" Description="Host folder that persists downloaded models. Keeps the model OUT of the docker image." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/whisper-asr</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="Which GPU(s) to expose. 'all', or a specific GPU UUID from the Nvidia Driver plugin." Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="GPU driver capabilities to expose." Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
+  <Config Name="MODEL_IDLE_TIMEOUT" Target="MODEL_IDLE_TIMEOUT" Default="0" Mode="" Description="Seconds of inactivity before the model is unloaded from VRAM (0 = keep loaded). Set e.g. 300 to free the GPU between jobs at the cost of a reload delay." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>
+
