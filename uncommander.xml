@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+<Plugin>True</Plugin>
+<PluginURL>https://raw.githubusercontent.com/hernandito/unCommander/main/uncommander.plg</PluginURL>
+<PluginAuthor>hernandito</PluginAuthor>
+<Beta>False</Beta>
+<Category>Tools:Utilities</Category>
+<Name>unCommander</Name>
+<Description>
+unCommander is a two-pane, Midnight Commander-style file manager for the Unraid web UI. Browse two folders side by side and copy, move, rename, delete, compress, extract and compare with taps or F-keys. Copies and moves run in the background with progress; deletes go to a trash you can restore from, and most actions can be undone. Includes batch rename with a live preview, a viewer and editor with colour highlighting, folder sizes, practice mode, an optional whole-system view (browse / like MC on the console), a Midnight Commander theme, per-device text size, and tools to find empty leftover folders, movie folders that lost their video (with Radarr) and TV shows with missing episodes (checked against TVmaze, with Sonarr). Works great on a tablet.</Description>
+<Support>https://forums.unraid.net/</Support>
+<Project>https://github.com/hernandito/unCommander</Project>
+<Icon>https://raw.githubusercontent.com/hernandito/unCommander/main/icon.png</Icon>
+<DonateText>Buy me a coffee</DonateText>
+<DonateLink>https://www.buymeacoffee.com/hernandito</DonateLink>
+<Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/main-view.png</Screenshot>
+<Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/batch-rename.png</Screenshot>
+<Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/tools-empty-folders.png</Screenshot>
+<Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/tools-tv.png</Screenshot>
+</Containers>

@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/ahmetoner/whisper-asr-webservice/issues</Support>
   <Project>https://github.com/ahmetoner/whisper-asr-webservice</Project>
-  <Overview>GPU accelerated Whisper ASR Webservice using the faster-whisper engine, exposing an HTTP API that returns word-level timestamps. Models are stored on the host (ASR_MODEL_PATH) so they are NOT baked into the docker image.</Overview>
+  <Overview>GPU accelerated Whisper ASR Webservice using the faster-whisper engine, exposing an HTTP API that returns word-level timestamps. This image ALSO contains WhisperX (word-alignment), which SubSyncarr calls directly - no separate install. Models are stored on the host (ASR_MODEL_PATH) so they are NOT baked into the docker image. The two "SubSyncarr patch" file-mappings at the bottom bind-mount SubSyncarr's patched engine files over the image's copies, which adds the multilingual=true per-segment language option to /asr and survives image upgrades (no re-apply needed). Leave those two mappings empty if you do not use SubSyncarr.</Overview>
   <Category>MediaApp:Other Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:9000]/docs</WebUI>
   <TemplateURL/>
@@ -20,9 +20,9 @@
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Requires>Requires the unRAID "Nvidia Driver" plugin and an NVIDIA GPU. First start downloads the model (large-v3 ~3 GB) to the Models path below. On a 6GB card keep ASR_QUANTIZATION=int8.</Requires>
+  <Requires>Requires the unRAID "Nvidia Driver" plugin and an NVIDIA GPU. First start downloads the model (large-v3 ~3 GB) to the Models path below. On a 6GB card keep ASR_QUANTIZATION=int8. (No NVIDIA GPU? Use the CPU-only template instead.)</Requires>
   <Config Name="WebUI / API Port" Target="9000" Default="9000" Mode="tcp" Description="HTTP API + Swagger docs (http://host:9000/docs)" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
-  <Config Name="ASR_ENGINE" Target="ASR_ENGINE" Default="faster_whisper" Mode="" Description="Engine: openai_whisper, faster_whisper, or whisperx. Use faster_whisper." Type="Variable" Display="always" Required="true" Mask="false">faster_whisper</Config>
+  <Config Name="ASR_ENGINE" Target="ASR_ENGINE" Default="faster_whisper" Mode="" Description="Engine: openai_whisper, faster_whisper, or whisperx. Use faster_whisper (it supports SubSyncarr's multilingual=true per-segment detection). WhisperX is still in the image and SubSyncarr calls its aligner directly - do NOT set this to whisperx (its engine mode currently fails at startup on this image)." Type="Variable" Display="always" Required="true" Mask="false">faster_whisper</Config>
   <Config Name="ASR_MODEL" Target="ASR_MODEL" Default="large-v3" Mode="" Description="Model: tiny, base, small, medium, large-v3. Larger = more accurate + more VRAM." Type="Variable" Display="always" Required="true" Mask="false">large-v3</Config>
   <Config Name="ASR_QUANTIZATION" Target="ASR_QUANTIZATION" Default="int8" Mode="" Description="Model precision: float32, float16, int8. On GPU this DEFAULTS to float32 (huge). Use int8 so large-v3 fits in ~2.5GB VRAM (needed for 6GB cards like a GTX 1660 Ti); use float16 on bigger cards for max accuracy." Type="Variable" Display="always" Required="true" Mask="false">int8</Config>
   <Config Name="ASR_MODEL_PATH" Target="ASR_MODEL_PATH" Default="/data/whisper" Mode="" Description="Where models are stored INSIDE the container. Must match the Models host-path mapping below so models persist on disk instead of bloating the docker image." Type="Variable" Display="always" Required="true" Mask="false">/data/whisper</Config>
@@ -31,5 +31,6 @@
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="Which GPU(s) to expose. 'all', or a specific GPU UUID from the Nvidia Driver plugin." Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="GPU driver capabilities to expose." Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
   <Config Name="MODEL_IDLE_TIMEOUT" Target="MODEL_IDLE_TIMEOUT" Default="0" Mode="" Description="Seconds of inactivity before the model is unloaded from VRAM (0 = keep loaded). Set e.g. 300 to free the GPU between jobs at the cost of a reload delay." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="SubSyncarr patch: webservice.py" Target="/app/app/webservice.py" Default="/mnt/user/appdata/subsync-build/wasr-multilingual-patch/webservice.py" Mode="ro" Description="SubSyncarr multilingual patch - bind-mounts the patched file over the image's copy (adds the ?multilingual=true query param to /asr). Survives image upgrades, so no manual re-apply. Leave EMPTY if you do not use SubSyncarr." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/subsync-build/wasr-multilingual-patch/webservice.py</Config>
+  <Config Name="SubSyncarr patch: faster_whisper_engine.py" Target="/app/app/asr_models/faster_whisper_engine.py" Default="/mnt/user/appdata/subsync-build/wasr-multilingual-patch/faster_whisper_engine.py" Mode="ro" Description="SubSyncarr multilingual patch - bind-mounts the patched file over the image's copy (passes multilingual through to faster-whisper). Survives image upgrades. Leave EMPTY if you do not use SubSyncarr." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/subsync-build/wasr-multilingual-patch/faster_whisper_engine.py</Config>
 </Container>
-

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Whisper-asr-CPU</Name>
+  <Repository>onerahmet/openai-whisper-asr-webservice:latest-gpu</Repository>
+  <Registry>https://registry.hub.docker.com/r/onerahmet/openai-whisper-asr-webservice/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ahmetoner/whisper-asr-webservice/issues</Support>
+  <Project>https://github.com/ahmetoner/whisper-asr-webservice</Project>
+  <Overview>CPU-ONLY Whisper ASR Webservice (no NVIDIA GPU required). Same faster-whisper HTTP API with word-level timestamps, but transcription runs on the CPU + system RAM. It WORKS but is MUCH slower than GPU - expect roughly 5-15x longer (a 50-min episode can take well over an hour). This uses the SAME image as the GPU template on purpose, so WhisperX and the SubSyncarr multilingual patch are guaranteed compatible; it simply never requests a GPU and sets ASR_DEVICE=cpu. (The image carries CUDA libraries it won't use - it still runs fine on a GPU-less box. Advanced users can swap the Repository tag to onerahmet/openai-whisper-asr-webservice:latest for a smaller CPU image, but then verify the patch files still match.) NOTE: WhisperX word-alignment on CPU is extremely slow, so SubSyncarr skips or down-scopes alignment on CPU-only setups. Leave the two "SubSyncarr patch" mappings empty if you do not use SubSyncarr.</Overview>
+  <Category>MediaApp:Other Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:9000]/docs</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/whisper-asr.png</Icon>
+  <ExtraParams>--memory=12g</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>No GPU and no Nvidia Driver plugin needed. Give it plenty of RAM (large-v3 int8 on CPU wants ~6-10 GB; the --memory cap in Extra Parameters is a safety ceiling - adjust to taste). First start downloads the model (large-v3 ~3 GB) to the Models path below. If you also run the GPU container, change this one's host PORT (e.g. 9001) so they don't collide.</Requires>
+  <Config Name="WebUI / API Port" Target="9000" Default="9000" Mode="tcp" Description="HTTP API + Swagger docs (http://host:9000/docs). Change the host port if a GPU Whisper container already uses 9000." Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="ASR_ENGINE" Target="ASR_ENGINE" Default="faster_whisper" Mode="" Description="Use faster_whisper (supports SubSyncarr's multilingual=true). Do NOT set to whisperx." Type="Variable" Display="always" Required="true" Mask="false">faster_whisper</Config>
+  <Config Name="ASR_MODEL" Target="ASR_MODEL" Default="large-v3" Mode="" Description="Model: tiny, base, small, medium, large-v3. On a weak CPU, 'medium' or 'small' trade accuracy for a big speed-up." Type="Variable" Display="always" Required="true" Mask="false">large-v3</Config>
+  <Config Name="ASR_QUANTIZATION" Target="ASR_QUANTIZATION" Default="int8" Mode="" Description="int8 = smallest + fastest on CPU. (float32/float16 are slower and heavier on CPU.)" Type="Variable" Display="always" Required="true" Mask="false">int8</Config>
+  <Config Name="ASR_MODEL_PATH" Target="ASR_MODEL_PATH" Default="/data/whisper" Mode="" Description="Where models are stored INSIDE the container. Must match the Models host-path mapping below." Type="Variable" Display="always" Required="true" Mask="false">/data/whisper</Config>
+  <Config Name="ASR_DEVICE" Target="ASR_DEVICE" Default="cpu" Mode="" Description="cpu = run entirely on the processor + RAM. No GPU is requested." Type="Variable" Display="always" Required="true" Mask="false">cpu</Config>
+  <Config Name="Models" Target="/data/whisper" Default="/mnt/cache/appdata/whisper-asr" Mode="rw" Description="Host folder that persists downloaded models. Keeps the model OUT of the docker image." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/whisper-asr</Config>
+  <Config Name="OMP_NUM_THREADS" Target="OMP_NUM_THREADS" Default="8" Mode="" Description="CPU threads used for transcription. Set near your core count for best speed." Type="Variable" Display="always" Required="false" Mask="false">8</Config>
+  <Config Name="MODEL_IDLE_TIMEOUT" Target="MODEL_IDLE_TIMEOUT" Default="0" Mode="" Description="Seconds of inactivity before the model is unloaded from RAM (0 = keep loaded). Set e.g. 300 to free RAM between jobs at the cost of a reload delay." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="SubSyncarr patch: webservice.py" Target="/app/app/webservice.py" Default="/mnt/user/appdata/subsync-build/wasr-multilingual-patch/webservice.py" Mode="ro" Description="SubSyncarr multilingual patch - bind-mounts the patched file over the image's copy. Survives image upgrades. Leave EMPTY if you do not use SubSyncarr." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/subsync-build/wasr-multilingual-patch/webservice.py</Config>
+  <Config Name="SubSyncarr patch: faster_whisper_engine.py" Target="/app/app/asr_models/faster_whisper_engine.py" Default="/mnt/user/appdata/subsync-build/wasr-multilingual-patch/faster_whisper_engine.py" Mode="ro" Description="SubSyncarr multilingual patch - bind-mounts the patched file over the image's copy. Survives image upgrades. Leave EMPTY if you do not use SubSyncarr." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/subsync-build/wasr-multilingual-patch/faster_whisper_engine.py</Config>
+</Container>
