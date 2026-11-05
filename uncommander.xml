@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Plugin>
   <Name>unCommander</Name>
-  <Overview>Two-pane, Midnight Commander-style file manager for the Unraid web UI, with background file operations, trash and undo, batch renaming, folder comparison, and built-in maintenance tools.</Overview>
   <PluginURL>https://raw.githubusercontent.com/hernandito/unCommander/main/uncommander.plg</PluginURL>
   <PluginAuthor>hernandito</PluginAuthor>
   <Support>https://forums.unraid.net/topic/200949-plugin-uncommander-%E2%AD%90-a-powerful-two-pane-file-manager/</Support>
   <Project>https://github.com/hernandito/unCommander</Project>
+  <Overview>Two-pane, Midnight Commander-style file manager for the Unraid web UI, with background file operations, trash and undo, batch renaming, folder comparison, and built-in maintenance tools.</Overview>
   <ReadMe>https://raw.githubusercontent.com/hernandito/unCommander/main/README.md</ReadMe>
   <Category>Tools:Utilities</Category>
   <MinVer>7.2.0</MinVer>
