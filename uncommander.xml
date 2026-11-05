@@ -8,9 +8,9 @@
   <Project>https://github.com/hernandito/unCommander</Project>
   <ReadMe>https://raw.githubusercontent.com/hernandito/unCommander/main/README.md</ReadMe>
   <Category>Tools:Utilities</Category>
+  <MinVer>7.2.0</MinVer>
   <Icon>https://raw.githubusercontent.com/hernandito/unCommander/main/icon.png</Icon>
   <License>MIT</License>
-  <Description>unCommander is a two-pane, Midnight Commander-style file manager for the Unraid web UI. Browse two folders side by side and copy, move, rename, delete, compress, extract, and compare files using taps or F-keys. Copies and moves run in the background with progress; deleted files can be sent to a restorable trash, and many actions can be undone. Features include batch renaming with live preview, file viewing and editing with syntax highlighting, folder sizes, practice mode, an optional whole-system view, a Midnight Commander theme, per-device text size, and tools to find empty leftover folders, movie folders missing their video files, and TV shows with missing episodes.</Description>
   <DonateText>Buy me a coffee</DonateText>
   <DonateLink>https://www.buymeacoffee.com/hernandito</DonateLink>
   <Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/main-view.png</Screenshot>
