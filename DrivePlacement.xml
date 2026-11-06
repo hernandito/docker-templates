@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Plugin>
+  <Name>Drive Placement</Name>
+  <Overview><![CDATA[An interactive, drag-and-drop visualizer that maps your physical unRAID server layout to a virtual dashboard, so you always know which bay a drive lives in. Each drive card shows its temperature, usage, free space, type, and health at a glance, with custom naming, per-category and per-card background colors, a dark-skin aware theme, and layouts saved to your flash drive.]]></Overview>
+  <PluginURL>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/driveplacement.plg</PluginURL>
+  <PluginAuthor>hernandito</PluginAuthor>
+  <Support>https://github.com/hernandito/Drive.Placement/issues</Support>
+  <Project>https://github.com/hernandito/Drive.Placement</Project>
+  <ReadMe>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/README.md</ReadMe>
+  <Category>Tools:Utilities Tools:System</Category>
+  <MinVer>6.12.0</MinVer>
+  <Icon>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/icon.png</Icon>
+  <License>MIT</License>
+  <Screenshot>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/screenshot.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/screenshot-unlocked.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/screenshot-compact.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hernandito/Drive.Placement/main/screenshot-pdf.png</Screenshot>
+</Plugin>
