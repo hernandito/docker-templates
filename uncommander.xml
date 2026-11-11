@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Plugin>
   <Name>unCommander</Name>
+  <Overview><![CDATA[Two-pane, Midnight Commander-style file manager for the Unraid web UI, with background file operations, trash and undo, batch renaming, folder comparison, and built-in maintenance tools.]]></Overview>
   <PluginURL>https://raw.githubusercontent.com/hernandito/unCommander/main/uncommander.plg</PluginURL>
   <PluginAuthor>hernandito</PluginAuthor>
-  <Support>https://forums.unraid.net/topic/200949-plugin-uncommander-%E2%AD%90-a-powerful-two-pane-file-manager/</Support>
+  <Support>https://github.com/hernandito/unCommander/issues</Support>
   <Project>https://github.com/hernandito/unCommander</Project>
-  <Overview>Two-pane, Midnight Commander-style file manager for the Unraid web UI, with background file operations, trash and undo, batch renaming, folder comparison, and built-in maintenance tools.</Overview>
-  <ReadMe>https://raw.githubusercontent.com/hernandito/unCommander/main/README.md</ReadMe>
-  <Category>Tools:Utilities</Category>
-  <MinVer>7.2.0</MinVer>
-  <Icon>https://raw.githubusercontent.com/hernandito/unCommander/main/icon.png</Icon>
+  <ReadMe>https://raw.githubusercontent.com/hernandito/unCommander/refs/heads/main/README.md</ReadMe>
+  <Category>Tools:Utilities Tools:System</Category>
+  <MinVer>6.12.0</MinVer>
+  <Icon>https://raw.githubusercontent.com/hernandito/unCommander/refs/heads/main/assets/icon.png</Icon>
   <License>MIT</License>
-  <DonateText>Buy me a coffee</DonateText>
-  <DonateLink>https://www.buymeacoffee.com/hernandito</DonateLink>
   <Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/main-view.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/batch-rename.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/tools-empty-folders.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/hernandito/unCommander/main/screenshots/tools-tv.png</Screenshot>
 </Plugin>
+
